@@ -1,0 +1,64 @@
+#login_heading{
+    text-align: center;
+    font-family: 'Mochiy Pop One', sans-serif;
+    margin-top: 5%;
+    font-size: xx-large;
+    color: white;
+}
+
+#wallet_metamask_div{
+    margin-top: 5%;
+    text-align: center;
+}
+
+#wallet_metamask_image{
+    width: 50%;
+}
+
+#connect_button_div{
+    margin-top: 2%;
+    text-align: center;
+}
+
+#connect_button{
+    margin-top: 2%;
+    font-family: 'Anton', sans-serif;
+    padding: 1%;
+    border: 3px solid white;
+    color: black;
+    font-weight: 800;
+    background-color: white;
+}
+
+#complete_login_div{
+    margin-bottom: 0%;
+}
+
+@media only screen and (max-width: 2000px) {
+    #complete_login_div{
+        margin-bottom: 20%;
+        margin-top: 10%;
+    }
+}
+
+
+@media only screen and (max-width: 1000px) {
+    #complete_login_div{
+        margin-bottom: 55%;
+        margin-top: 30%;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    #complete_login_div{
+        margin-bottom: 74%;
+        margin-top: 50%;
+    }
+}
+
+@media only screen and (max-width: 545px) {
+    #complete_login_div{
+        margin-bottom: 155%;
+        margin-top: 55%;
+    }
+}

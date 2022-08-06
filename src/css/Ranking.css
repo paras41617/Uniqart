@@ -1,0 +1,92 @@
+
+  .image_2_ranking{
+    width: 28%;
+    padding: 2%;
+    height: 120px;
+  }
+
+  .grid_container_2_ranking {
+    display: grid;
+    grid-template-columns: auto auto auto auto; 
+    padding: 10px;
+    text-align: center;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  .card_2_ranking {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 60%;
+    border-radius: 15px;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-bottom: 3%;
+    background-color: white;
+  }
+  
+  .card_2_ranking:hover {
+    box-shadow: 0 16px 32px 0 rgba(255, 255, 255, 0.308);
+  }
+
+  .container_2_ranking {
+    justify-content: center;
+    padding: 2px 10px;
+    font-size: 60%;
+    margin-top: 2.5%;
+    width: 30%;
+  }
+
+  .container_2_ranking p{
+    padding: 2%;
+    padding-top: 1%;
+    font-family: 'Mochiy Pop One', sans-serif;
+    font-weight: 800;
+    font-size: 10px;
+}
+
+.container_2_ranking h4{
+    font-family: 'Mochiy Pop One', sans-serif;
+    padding: 2%;
+    padding-top: 1%;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+
+#ranking_1{
+    font-family: 'Mochiy Pop One', sans-serif;
+    color: white;
+    margin-left: 10%;
+}
+
+.flex_ranking{
+    display: flex;
+    width: 100%;
+}
+
+.ranking_button{
+    background: none;
+    border: none;
+    display: block;
+    width: 100%;
+}
+
+.circle {
+    width: 130px;
+    height: 130px;
+    line-height: 130px;
+    border-radius: 50%;
+    font-size: 50px;
+    color: #fff;
+    margin-left: 15%;
+    margin-top: 1%;
+    text-align: center;
+    background: #000
+  }
+
+#ranking_1{
+    margin-bottom: 2%;
+    margin-left: 25%;
+    margin-top: 2%;
+}

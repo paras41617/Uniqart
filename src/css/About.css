@@ -1,0 +1,27 @@
+#complete_about_div{
+    margin-top: 5%;
+    font-family: 'Anton', sans-serif;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 5%;
+}
+
+#about_heading{
+    text-align: center;
+    font-size: 250%;
+    margin-bottom: 5%;
+    font-family: 'Mochiy Pop One', sans-serif;
+    color: white;
+}
+
+.blockchain_heading{
+    font-size: xx-large;
+    padding-bottom: 2%;
+    color: white;
+}
+
+.blockchain_content{
+    font-size: x-large;
+    color: gray;
+    margin-bottom: 2%;
+}
