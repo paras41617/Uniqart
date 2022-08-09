@@ -237,7 +237,7 @@ class Popup extends React.Component {
                             <div className='parallel_2'>
                                 <span class="tag tag-teal">Collection : {this.props.nft.collection}</span>
                                 {this.state.can_like ? null : <span class="tag_2 tag-teal_2">Liked</span>}
-                                <button onClick={this.state.can_like == 0?() => this.do_like:null} id={this.state.can_like ? "child_2" : "child"} class={this.state.can_like ? "like__btn" : "like__btn_2"}>
+                                <button onClick={this.state.can_like?this.do_like:null} id={this.state.can_like ? "child_2" : "child"} class={this.state.can_like ? "like__btn" : "like__btn_2"}>
                                     <span id="icon"><i class="far fa-thumbs-up material-icons">thumb_up</i></span>
                                 </button>
                             </div>

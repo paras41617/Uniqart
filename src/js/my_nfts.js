@@ -1,5 +1,4 @@
 import React from 'react';
-// import '../css/Popup.css'
 import { ethers } from 'ethers';
 import NFT from '../abis/NFT.json';
 import Market from '../abis/Market.json';
@@ -71,6 +70,7 @@ class My_nfts extends React.Component {
                 <div id='explore_1'>
                     My NFT
                 </div>
+                {this.state.nfts.length == 0 ?<h1 id="no_nft">No NFT Yet</h1> :null}
                 <div>
                     <p>&nbsp;</p>
                 </div>

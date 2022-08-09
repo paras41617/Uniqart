@@ -14,7 +14,7 @@
     border-radius: 5px;
     margin-left: 5%;
     margin-bottom: 10%;
-    background-color: white;
+    background-color: black;
   }
   
   .card_2_explore:hover {
@@ -55,3 +55,14 @@
     margin-left: 10%;
 }
 
+#no_purchases{
+  margin-left: 20%;
+  color: white;
+  margin-top: 10%;
+}
+
+#no_nft{
+  margin-left: 20%;
+  color: white;
+  margin-top: 10%;
+}

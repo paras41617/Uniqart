@@ -1,2 +1,2 @@
-export const nft_address = 'nft_contract_address'
-export const market_address = 'market_contract_address'
+export const nft_address = 'NFT_Contract_Address'
+export const market_address = 'Market_Contract_address'

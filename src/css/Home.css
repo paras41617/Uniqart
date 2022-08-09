@@ -78,6 +78,7 @@ body{
     text-align:center;
     transition: all 0.2s;
     margin-left: 50%;
+    margin-bottom: 5%;
 }
 
 #button_2:focus{
