@@ -6,7 +6,7 @@ import Market from '../abis/Market.json';
 import { nft_address, market_address } from '../config';
 import axios from 'axios';
 import Web3Modal from "web3modal";
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 class Home extends React.Component {
 
@@ -34,14 +34,16 @@ class Home extends React.Component {
     }
 
     async random_nfts() {
-        const temp = [];
-        for (let i = 0; i < 4; i++) {
-            let number = Math.floor((Math.random() * this.state.nfts.length) + 0);
-            let get = this.state.nfts[number];
-            temp.push(get);
+        if (this.state.nfts.length > 0) {
+            const temp = [];
+            for (let i = 0; i < 4; i++) {
+                let number = Math.floor((Math.random() * this.state.nfts.length) + 0);
+                let get = this.state.nfts[number];
+                temp.push(get);
+            }
+            this.setState({ random_nfts: temp });
+            this.setState({ random_nfts_load: true });
         }
-        this.setState({ random_nfts: temp });
-        this.setState({ random_nfts_load: true });
     }
 
     async load_nfts() {
@@ -62,7 +64,7 @@ class Home extends React.Component {
                 image: meta.data.image,
                 name: meta.data.name,
                 about: meta.data.about,
-                collection:meta.data.collection,
+                collection: meta.data.collection,
             }
             return item
         }))
@@ -85,8 +87,8 @@ class Home extends React.Component {
                         <div>
                             &nbsp;
                         </div>
-                        <button onClick={event =>  window.location.href='/explore'}
- id='button_1'>Dive</button>
+                        <button onClick={event => window.location.href = '/explore'}
+                            id='button_1'>Dive</button>
                     </div>
                     {this.state.random_load ? <div className="grid-container">
                         <div className="card">
@@ -149,8 +151,8 @@ class Home extends React.Component {
                             ))
                         }
                     </div>
-                    <button onClick={event =>  window.location.href='/explore'}
- id='button_2'>Dive</button>
+                    <button onClick={event => window.location.href = '/explore'}
+                        id='button_2'>Dive</button>
                 </div>
             </div>
         )
