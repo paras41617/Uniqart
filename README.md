@@ -1,70 +1,83 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Uniqart
 
-## Available Scripts
+Uniqart is a NFT Marketplace.
 
-In the project directory, you can run:
+One can mint a NFT and List it for selling or can buy NFT from the Marketplace.
 
-### `npm start`
+Bought NFT can be resell or the price can be changed.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Like feature is also provided to appreciate others. One can like others NFT.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Give Unique Collection name for every NFT just like Tag.
 
-### `npm test`
+Rankings are also shown based on the likes of the NFT. The more the likes  , the better will be ranking for that NFT.
+## Features
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Sell NFT
+- Buy NFT
+- Give Collection
+- Resell NFT
+- Change Price
+- Remove or Put for Selling
+- Like NFT
+- Search NFT
+- Rankings for NFT
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Documentation
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Explore page displays all the NFT listed on the Marketplace.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The Market Contract have authorization on NFT Contract , which manages all the NFT.
+## Tech Stack
 
-### `npm run eject`
+**Frontend:** React, CSS, HTML
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+**Backend:** Blockchain - Solidity , Ganache , Metamask , Infura
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Deployment
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Run Locally.
 
-## Learn More
+Start Ganache for local Blockchain.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Run the Following command while in the Project Directory
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+  truffle compile
+```
 
-### Code Splitting
+```bash
+  Copy the Market Contract Address and NFT Address and paste it in the config.js file.
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```bash
+  npm start
+```
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Screenshots
 
-### Making a Progressive Web App
+<img width="960" alt="home_1" src="https://user-images.githubusercontent.com/54182371/183636755-5a2c7268-2bee-48bd-bc4d-ad92e9c700c0.png">
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+<img width="960" alt="home_2" src="https://user-images.githubusercontent.com/54182371/183636778-62ee1b5b-b285-4494-b5f7-410b5677252f.png">
 
-### Advanced Configuration
+<img width="959" alt="home_3" src="https://user-images.githubusercontent.com/54182371/183636802-e14bc4c8-2b8e-495f-b892-daf6ba362ef2.png">
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+<img width="960" alt="about" src="https://user-images.githubusercontent.com/54182371/183636878-02abb412-6aff-45de-bf3a-06dfe6037944.png">
 
-### Deployment
+<img width="960" alt="mint" src="https://user-images.githubusercontent.com/54182371/183636897-dd2e5d9d-3727-4a1d-ac87-6b8109af010f.png">
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+<img width="959" alt="profile" src="https://user-images.githubusercontent.com/54182371/183636911-1d03fbae-b9ce-4a2c-a4a3-fdf1dd168d42.png">
 
-### `npm run build` fails to minify
+<img width="960" alt="explore" src="https://user-images.githubusercontent.com/54182371/183637094-3d20ede6-281c-463e-8dd7-9bf2a8aa6fe7.png">
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+## YouTube Video
+
+
+Demonstration of the project is given on YouTube.
+
+[<img width="815" alt="video" src="https://user-images.githubusercontent.com/54182371/183636836-50e949fa-b233-4a29-954b-150115c96f1c.png">](https://youtu.be/BYkHbyF2bWE)
