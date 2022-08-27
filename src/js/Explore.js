@@ -3,10 +3,13 @@ import '../css/Explore.css'
 import { ethers } from 'ethers';
 import NFT from '../abis/NFT.json';
 import Market from '../abis/Market.json';
-import { nft_address, market_address } from '../config';
+import { nft_address, market_address, storage_token } from '../config';
 import axios from 'axios';
 import Web3Modal from "web3modal"
 import Popup from './Popup';
+import { Web3Storage } from 'web3.storage'
+
+const client = new Web3Storage({ token: storage_token })
 
 class Explore extends React.Component {
 
@@ -28,10 +31,16 @@ class Explore extends React.Component {
     this.random_nft = this.random_nft.bind(this);
     this.random_nfts = this.random_nfts.bind(this);
     this.do_search = this.do_search.bind(this);
+    this.get_meta = this.get_meta.bind(this);
   }
 
-  togglePopup(type,i) {
-    this.setState({ single_element: type == "search" ?i:this.state.nfts[i] });
+  async get_meta(uri) {
+    let res = await axios.get(uri);
+    return res;
+  }
+
+  togglePopup(type, i) {
+    this.setState({ single_element: type == "search" ? i : this.state.nfts[i] });
     this.setState({
       showPopup: !this.state.showPopup
     });
@@ -66,7 +75,10 @@ class Explore extends React.Component {
     const data = await market_contract.fetchMarketItems();
     const items = await Promise.all(data.map(async i => {
       const token_uri = await token_contract.tokenURI(i.tokenId)
-      const meta = await axios.get(token_uri)
+      console.log(token_uri)
+      const meta = await this.get_meta(token_uri);
+      console.log(meta)
+      console.log("name : " + meta.data.name)
       let price = ethers.utils.formatUnits(i.price.toString(), 'ether')
       let item = {
         price,
@@ -85,6 +97,7 @@ class Explore extends React.Component {
       return item
     }))
     this.setState({ nfts: items, loading_state: 'loaded' });
+    console.log(items)
     this.random_nft();
   };
 
@@ -98,7 +111,7 @@ class Explore extends React.Component {
       });
     }
   }
-  
+
 
   componentDidMount() {
     this.load_nfts();
@@ -107,12 +120,13 @@ class Explore extends React.Component {
   render() {
     return (
       <div>
+        {console.log("nfts : " + this.state.nfts)}
         {this.state.search != null ?
           <div className='grid_container_2_explore'>
             <div className="card_2_explore">
               <a>
-                <img className='image_2_explore' onClick={() => this.togglePopup("search",this.state.search)} src={this.state.search.image} placeholder='random_picture' />
-                <div className="container_2_explore">
+                <img className='image_2_explore' onClick={() => this.togglePopup("search", this.state.search)} src={this.state.search.image} placeholder='random_picture' />
+                <div style={{backgroundColor:'white'}} className="container_2_explore">
                   <h4><b>{this.state.search.name}</b></h4>
                   <p>{this.state.search.price}</p>
                 </div>
@@ -129,7 +143,7 @@ class Explore extends React.Component {
           {
             this.state.nfts.map((nft, i) => (
               <div key={i} className="card_2_explore">
-                <button onClick={() => this.togglePopup("",i)} id="close">
+                <button onClick={() => this.togglePopup("", i)} id="close">
                   <img className='image_2_explore' src={nft.image} placeholder='random_picture' />
                   <div className="container_2_explore">
                     <h4><b>{nft.name}</b></h4>
